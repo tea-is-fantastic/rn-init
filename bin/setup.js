@@ -25,7 +25,7 @@ async function setup() {
   await exec(`rm -rf .git`);
 
   const {stdout1, stderr1} = await exec(
-      'npm i react-native-svg @tisf/rn-providers',
+      'npm i react-native-svg react-native-onesignal @tisf/rn-providers',
   );
   console.log('stdout:', stdout1);
   console.log('stderr:', stderr1);
