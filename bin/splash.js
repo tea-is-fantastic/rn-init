@@ -70,7 +70,7 @@ async function splash() {
   const {stdout, stderr} =
     await exec(`npx react-native generate-bootsplash assets/images/splash.png \\
   --background-color=${yamls.theme.palette.splash} \\
-  --logo-width=200 \\
+  --logo-width=150 \\
   --assets-path=assets \\
   --flavor=main`);
   console.log('stdout:', stdout);
