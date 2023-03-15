@@ -12,8 +12,8 @@ async function assets() {
     });
 
     forOwn(yamls.assets.icons, async (v, k) => {
-        await downloadFile(v, path.join(rn_dirs.rn_fonts, k + '.ttf'));
-        await downloadFile(v, path.join(rn_dirs.rn_iconfig, k + '.json'));
+        await downloadFile(v + '.ttf', path.join(rn_dirs.rn_fonts, k + '.ttf'));
+        await downloadFile(v + '.json', path.join(rn_dirs.rn_iconfig, k + '.json'));
         await fs.writeFile(path.join(rn_dirs.rn_iconfig, k + '.js'), `
 // Once your custom font has been loaded...
 import {createIconSetFromFontello} from 'react-native-vector-icons';
