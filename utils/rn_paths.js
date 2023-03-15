@@ -7,6 +7,7 @@ const rn_androidSrc = path.join(rn_android, 'app', 'src', 'main');
 const rn_src = path.join(src, 'src')
 const rn_assets = path.join(src, 'assets')
 const rn_fonts = path.join(rn_assets, 'fonts')
+const rn_iconfig = path.join(rn_assets, 'config')
 const rn_images = path.join(rn_assets, 'images')
 const rn_svg = path.join(rn_assets, 'svg')
 const rn_screens = path.join(rn_src, 'screens')
@@ -20,6 +21,7 @@ const rn_dirs = {
     rn_src,
     rn_assets,
     rn_fonts,
+    rn_iconfig,
     rn_images,
     rn_svg,
     rn_screens,
