@@ -31,35 +31,10 @@ function App(): JSX.Element {
 
 export default App; 
 `;
-  await fse.outputFile(path.join(rn_dirs.rn_shared, 'constants', 'env.ts'), code);
+  await fse.outputFile(path.join(rn_dirs.rn_src, 'App.tsx'), code);
 }
 
 async function fileChanges2() {
-  const code = `
-import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeScreen from './HomeScreen';
-import AuthScreen from './AuthScreen';
-
-const Stack = createNativeStackNavigator();
-
-function RootNavigator() {
-  return (
-    <Stack.Navigator>
-      <Stack.Group screenOptions={{headerShown: false}}>
-        <Stack.Screen name="RootScreen" component={AuthScreen} />
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
-      </Stack.Group>
-    </Stack.Navigator>
-  );
-}
-
-export default RootNavigator;
-`;
-  await fse.outputFile(path.join(rn_dirs.rn_screens, 'RootNavigator.tsx'), code);
-}
-
-async function fileChanges3() {
   const code = await fs.promises.readFile(path.join(env, 'env.ts'), 'utf-8');
   await fse.outputFile(path.join(rn_dirs.rn_shared, 'constants', 'env.ts'), code);
 }
@@ -73,7 +48,6 @@ async function structure() {
   await fileChanges();
   await fileChanges1();
   await fileChanges2();
-  await fileChanges3();
 }
 
 module.exports = structure;
