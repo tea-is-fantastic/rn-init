@@ -35,7 +35,8 @@ async function setup() {
     await exec(`rm -rf .git`);
 
     const {stdout1, stderr1} = await exec(
-        'npm i react-native-svg react-native-onesignal @tisf/rn-providers react-native-vector-icons',
+        'npm i react-native-svg react-native-onesignal ' +
+        '@tisf/rn-providers @tisf/rn-screens react-native-vector-icons',
     );
     await exec(
         'npm i -D @types/react-native-vector-icons',
