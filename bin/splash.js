@@ -66,7 +66,7 @@ async function fileChanges() {
 async function splash() {
   projectDir();
   await downloadFile(yamls.assets.images.splash, path.join(rn_dirs.rn_images, 'splash.png'));
-  await exec('npm i react-native-bootsplash');
+  await exec('npm i react-native-bootsplash --legacy-peer-deps');
   const {stdout, stderr} =
     await exec(`npx react-native generate-bootsplash assets/images/splash.png \\
   --background-color=${yamls.theme.palette.splash} \\

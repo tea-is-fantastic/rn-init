@@ -39,10 +39,10 @@ async function theme() {
     const {stdout, stderr} = await exec(
         'npm i nativewind color react-native-elements ' +
         'react-native-mmkv @react-native-firebase/app ' +
-        '@react-native-firebase/auth axios formik lodash moment yup',
+        '@react-native-firebase/auth axios formik lodash moment yup --legacy-peer-deps',
     );
     await exec(
-        'npm i -D tailwindcss @types/color @types/lodash',
+        'npm i -D tailwindcss @types/color @types/lodash babel-plugin-module-resolver --legacy-peer-deps',
     );
     console.log('stdout:', stdout);
     console.log('stderr:', stderr);

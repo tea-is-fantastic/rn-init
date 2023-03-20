@@ -30,7 +30,8 @@ async function fileChanges() {
 async function navigation() {
   projectDir();
   const {stdout, stderr} = await exec(
-    'npm i @react-navigation/native @react-navigation/native-stack react-native-screens react-native-safe-area-context',
+    'npm i @react-navigation/native @react-navigation/native-stack ' +
+      'react-native-screens react-native-safe-area-context --legacy-peer-deps',
   );
   console.log('stdout:', stdout);
   console.log('stderr:', stderr);

@@ -11,6 +11,27 @@ module.exports = {
   plugins: [
     'react-native-paper/babel',
     'nativewind/babel',
+    [
+      'module-resolver',
+      {
+        root: ['./'],
+        alias: {
+          components: './src/components',
+          assets: './assets',
+          screens: './src/screens',
+          config: './src/config',
+          navigations: './src/navigations',
+          utils: './src/utils',
+          actions: './src/state/actions',
+          constants: './src/state/constants',
+          contexts: './src/state/contexts',
+          reducers: './src/state/reducers',
+          assets: './src/assets/',
+          hooks: './src/hooks',
+          data: './src/data',
+        },
+      },
+    ],
     'react-native-reanimated/plugin',
   ],
 };
@@ -24,7 +45,7 @@ async function bottom() {
   const {stdout, stderr} = await exec(
     'npm i zustand react-native-reanimated ' +
       'react-native-gesture-handler @gorhom/bottom-sheet@^4 ' +
-      'react-native-paper@^5.0.0-rc.10',
+      'react-native-paper@^5.0.0-rc.10 --legacy-peer-deps',
   );
   console.log('stdout:', stdout);
   console.log('stderr:', stderr);
