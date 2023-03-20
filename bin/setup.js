@@ -39,7 +39,7 @@ async function setup() {
         'react-native-vector-icons @tisf/rn-providers --legacy-peer-deps',
     );
     await exec(
-        'npm i -D @types/react-native-vector-icons',
+        'npm i -D @types/react-native-vector-icons --legacy-peer-deps',
     );
     console.log('stdout:', stdout1);
     console.log('stderr:', stderr1);
