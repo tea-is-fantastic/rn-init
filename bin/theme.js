@@ -37,10 +37,12 @@ async function fileChanges2() {
 async function theme() {
     projectDir();
     const {stdout, stderr} = await exec(
-        'npm i nativewind color react-native-elements',
+        'npm i nativewind color react-native-elements ' +
+        'react-native-mmkv @react-native-firebase/app ' +
+        '@react-native-firebase/auth axios formik lodash moment yup',
     );
     await exec(
-        'npm i -D tailwindcss @types/color',
+        'npm i -D tailwindcss @types/color @types/lodash',
     );
     console.log('stdout:', stdout);
     console.log('stderr:', stderr);

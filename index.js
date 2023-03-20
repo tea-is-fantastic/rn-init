@@ -10,7 +10,6 @@ const f = {
     theme: require("./bin/theme"),
     bottom: require("./bin/bottom"),
     splash: require('./bin/splash'),
-    firebase: require('./bin/firebase'),
 }
 
 const argv = require('minimist')(process.argv.slice(2));
@@ -38,8 +37,6 @@ async function setup() {
     await f.bottom();
     console.log("splash");
     await f.splash();
-    console.log("firebase");
-    await f.firebase();
 }
 
 setup();
