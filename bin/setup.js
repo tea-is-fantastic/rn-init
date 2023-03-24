@@ -36,7 +36,7 @@ async function setup() {
 
     const {stdout1, stderr1} = await exec(
         'npm i react-native-svg react-native-onesignal ' +
-        'react-native-vector-icons @tisf/rn-providers --legacy-peer-deps',
+        'react-native-vector-icons @tisf/rn-providers @tisf/rn-ui --legacy-peer-deps',
     );
     await exec(
         'npm i -D @types/react-native-vector-icons --legacy-peer-deps',
