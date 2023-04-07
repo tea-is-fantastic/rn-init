@@ -1,6 +1,6 @@
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
-const {regexReplace, rn_androidSrc, yamls, projectDir} = require('../utils');
+const {regexReplace, rn_androidSrc, yamls, projectDir} = require("@tisf/utils");
 const path = require('path');
 
 async function fileChanges() {

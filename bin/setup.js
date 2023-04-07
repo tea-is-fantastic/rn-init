@@ -1,5 +1,5 @@
 const util = require('util');
-const {yamls, regexReplace, rn_android, projectDir} = require("../utils");
+const {yamls, regexReplace, rn_android, projectDir} = require("@tisf/utils");
 const path = require("path");
 const exec = util.promisify(require('child_process').exec);
 

@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+require("./env");
+const {argv} = require("@tisf/utils");
 
 const f = {
     start: require("./bin/start"),
@@ -12,8 +14,6 @@ const f = {
     splash: require('./bin/splash'),
     firebase: require('./bin/firebase'),
 }
-
-const argv = require('minimist')(process.argv.slice(2));
 
 async function setup() {
     if(argv.s) {

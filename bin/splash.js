@@ -1,6 +1,6 @@
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
-const {regexReplace, rn_android, rn_androidSrc, yamls, downloadFile, rn_dirs, projectDir} = require('../utils');
+const {regexReplace, rn_android, rn_androidSrc, yamls, downloadFile, rn_dirs, projectDir} = require("@tisf/utils");
 const path = require('path');
 const prettifyXml = require('xml-formatter');
 

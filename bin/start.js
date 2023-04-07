@@ -1,5 +1,5 @@
 const util = require('util');
-const {yamls} = require("../utils");
+const {yamls} = require("@tisf/utils");
 const exec = util.promisify(require('child_process').exec);
 
 async function start() {

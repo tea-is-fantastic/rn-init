@@ -1,6 +1,8 @@
 const util = require('util');
 const path = require("path");
-const {src, downloadFile, yamls, rn_dirs, jsonMerge, projectDir} = require("../utils");
+const {src, downloadFile, yamls
+    , rn_dirs
+    , jsonMerge, projectDir} = require("@tisf/utils");
 const exec = util.promisify(require('child_process').exec);
 
 async function icon() {

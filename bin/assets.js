@@ -1,6 +1,6 @@
 const util = require('util');
 const fs = require("fs/promises");
-const {src, downloadFile, yamls, rn_dirs, projectDir} = require("../utils");
+const {src, downloadFile, yamls, rn_dirs, projectDir} = require("@tisf/utils");
 const path = require("path");
 const {forOwn} = require("lodash");
 const exec = util.promisify(require('child_process').exec);

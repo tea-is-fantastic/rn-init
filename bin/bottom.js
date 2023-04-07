@@ -1,6 +1,6 @@
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
-const {src, projectDir} = require('../utils');
+const {src, projectDir} = require("@tisf/utils");
 const path = require('path');
 const fs = require("fs");
 

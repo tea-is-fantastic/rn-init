@@ -1,6 +1,6 @@
 const fs = require("fs");
 const {values} = require("lodash");
-const {rn_dirs, src, regexReplace, projectDir} = require("../utils");
+const {rn_dirs, src, regexReplace, projectDir} = require("@tisf/utils");
 const path = require("path");
 
 async function fileChanges() {
